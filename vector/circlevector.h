@@ -29,16 +29,14 @@ public:
 class Vector {
 private:
     
-    int N;
+    //int N{};
     Vector* coord_array;
 public:
-    //double Length();
+    double Length(int n);
+    
     double x, y;
+    Vector() : x(0), y(0) {}
 
-    Vector() {
-        x = 0;
-        y = 0;
-    }
     /*Vector(double x_coord, double y_coord) {
         x = x_coord;
         y = y_coord;
@@ -52,7 +50,10 @@ public:
         coord_array[ind] = value;
     }
 
-    void PrintMassive(int N);
+    double getValueX() { return x; }
+    double getValueY() { return y; }
+
+    void PrintMassive(int i);
 
     ~Vector() {
         delete[]coord_array;

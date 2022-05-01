@@ -25,8 +25,8 @@ int main()
     int n;
     cout << "¬ведите количество векторов: ";
     cin >> n;
-    Vector N (n);
 
+    Vector N (n);
     Vector vectr;
     Vector mass(n);
 
@@ -35,7 +35,10 @@ int main()
         cin >> vectr.x >> vectr.y;
         mass.setValue(i, vectr);
     }
-    mass.PrintMassive(n);
-    
+    for (int i = 0; i < n; i++) {
+        mass.PrintMassive(i);
+        cout << "ƒлина: " << mass.Length(i) << endl;
+        cout << endl;
+    }
 
 }

@@ -11,12 +11,11 @@ double Circle::Length() {
     return 3.1415 * GetRad();
 };
 
-void Vector::PrintMassive(int n) {
-	for (int i = 0; i < n; i++) {
-		cout << "(" << this->coord_array[i].x << ", " << this->coord_array[i].y << ")" << endl;
-	}
+void Vector::PrintMassive(int i) {
+	cout << "Вектор: " << "(" << this->coord_array[i].x << ", " << this->coord_array[i].y << ");" << endl;
+		
 }
 
-double Vector::Length() {
-
+double Vector::Length(int j) {
+	return ( sqrt(pow(this->coord_array[j].x, 2) + pow(this->coord_array[j].y, 2)) );
 }
