@@ -5,10 +5,9 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "ru");
-    cout << "КРУГ." << endl;
+    cout << "CIRCLE." << endl;
     double rad;
-    cout << "Введите радиус: ";
+    cout << "Enter radius: ";
     cin >> rad;
     cout << endl;
 
@@ -20,10 +19,10 @@ int main()
 
     //_____________
 
-    cout << "ВЕКТОР." << endl;
+    cout << "VECTOR." << endl;
 
     int n;
-    cout << "Введите количество векторов: ";
+    cout << "Enter number of vectors: ";
     cin >> n;
 
     Vector N (n);
@@ -31,13 +30,13 @@ int main()
     Vector mass(n);
 
     for (int i = 0; i < n; i++) {
-        cout << "Введите координаты x, y " << i+1 << "-ого вектора: ";
+        cout << "Enter x, y coordinates of the " << i+1 << " vector: ";
         cin >> vectr.x >> vectr.y;
         mass.setValue(i, vectr);
     }
     for (int i = 0; i < n; i++) {
         mass.PrintMassive(i);
-        cout << "Длина: " << mass.Length(i) << endl;
+        cout << "Length: " << mass.Length(i) << endl;
         cout << endl;
     }
 

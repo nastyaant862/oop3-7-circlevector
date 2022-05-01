@@ -12,7 +12,7 @@ double Circle::Length() {
 };
 
 void Vector::PrintMassive(int i) {
-	cout << "Вектор: " << "(" << this->coord_array[i].x << ", " << this->coord_array[i].y << ");" << endl;
+	cout << "Vector: " << "(" << this->coord_array[i].x << ", " << this->coord_array[i].y << ")" << endl;
 		
 }
 
