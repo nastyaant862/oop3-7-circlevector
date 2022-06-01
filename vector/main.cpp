@@ -1,6 +1,5 @@
 #include "circlevector.h"
 #include <iostream>
-
 using namespace std;
 
 int main()
@@ -13,31 +12,39 @@ int main()
 
     Circle R (rad);
 
-    cout << R.Area() << endl;
-    cout << R.Length() << endl;
+    cout << "Area = " << R.Area() << endl;
+    cout << "Lenght = " << R.Length() << endl;
     cout << endl;
 
     //_____________
 
     cout << "VECTOR." << endl;
 
-    int n;
+    int n, coordx, coordy;
     cout << "Enter number of vectors: ";
     cin >> n;
 
-    Vector N (n);
     Vector vectr;
-    Vector mass(n);
+    Vector* mass = new Vector[n];
 
-    for (int i = 0; i < n; i++) {
-        cout << "Enter x, y coordinates of the " << i+1 << " vector: ";
-        cin >> vectr.x >> vectr.y;
-        mass.setValue(i, vectr);
+    for (int i = 0; i < n; i++) 
+    {
+        cout << "Enter x coordinate of the " << i+1 << " vector: ";
+        cin >> coordx;
+        vectr.setValueX(coordx);
+
+        cout << "Enter y coordinate of the " << i+1 << " vector: ";
+        cin >> coordy;
+        vectr.setValueY(coordy);
+
+        mass[i] = vectr;
     }
-    for (int i = 0; i < n; i++) {
-        mass.PrintMassive(i);
-        cout << "Length: " << mass.Length(i) << endl;
+
+    for (int i = 0; i < n; i++) 
+    {
+        cout << "Length: " << mass[i].LengthV() << endl;
         cout << endl;
     }
 
+    delete[]mass;
 }

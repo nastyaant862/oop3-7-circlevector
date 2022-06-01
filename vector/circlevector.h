@@ -28,36 +28,31 @@ public:
 
 class Vector {
 private:
-    
-    //int N{};
-    Vector* coord_array;
-public:
-    double Length(int n);
-    
     double x, y;
+public:
+    double LengthV();
+
     Vector() : x(0), y(0) {}
 
-    /*Vector(double x_coord, double y_coord) {
-        x = x_coord;
-        y = y_coord;
-    }*/
-
-    Vector(int N) {
-        coord_array = new Vector[N]; 
+    Vector(const Vector &other) {
+        this->x = other.x;
+        this->y = other.y;
+        /*this->size = other.size;
+        this->coord_array = new Vector[other.size];
+        for (int i = 0; i < other.size; i++) {
+            this->coord_array[i] = other.coord_array[i];
+        }*/
     }
 
-    void setValue(int ind, Vector value) {
-        coord_array[ind] = value;
-    }
-
+    void setValueX(int xx) {x = xx;}
+    void setValueY(int yy) {y = yy;}
     double getValueX() { return x; }
     double getValueY() { return y; }
 
-    void PrintMassive(int i);
-
+    /*
     ~Vector() {
         delete[]coord_array;
-    }
+    }*/
 };
 
 #endif
