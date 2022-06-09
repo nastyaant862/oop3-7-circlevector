@@ -4,6 +4,8 @@ using namespace std;
 
 int main()
 {
+    Circle d;
+    
     cout << "CIRCLE." << endl;
     double rad;
     cout << "Enter radius: ";
